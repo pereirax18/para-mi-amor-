@@ -7,7 +7,9 @@
 <style>
 
 body{
-background: linear-gradient(135deg,#ff758c,#ff7eb3);
+background-image:url("https://i.imgur.com/1v7ZC6G.jpg");
+background-size:cover;
+background-position:center;
 font-family: Arial;
 text-align:center;
 color:white;
@@ -16,13 +18,15 @@ padding:40px;
 
 h1{
 font-size:55px;
+text-shadow:2px 2px 10px black;
 }
 
 p{
-font-size:22px;
+font-size:24px;
 max-width:700px;
 margin:auto;
 line-height:1.6;
+text-shadow:1px 1px 8px black;
 }
 
 button{
@@ -44,12 +48,7 @@ background:#ffe6ec;
 display:none;
 margin-top:30px;
 font-size:24px;
-}
-
-img{
-width:250px;
-border-radius:20px;
-margin:10px;
+text-shadow:1px 1px 8px black;
 }
 
 .heart{
@@ -91,22 +90,19 @@ e para sempre. ❤️
 
 <br>
 
-<h2>Nossas Memórias 📸</h2>
-
-<img src="https://i.imgur.com/9yG3K3H.jpg">
-<img src="https://i.imgur.com/8Km9tLL.jpg">
+<button onclick="tocarMusica()">Tocar nossa música 🎵</button>
 
 <br>
 
 <button onclick="mostrar()">Clique para uma surpresa 🎁</button>
 
 <div id="surpresa">
-💌 Você é a melhor coisa que já aconteceu na minha vida.  
-Obrigado por existir e por fazer meus dias mais felizes.  
+💌 Você é a melhor coisa que já aconteceu na minha vida.
+Obrigado por existir e por fazer meus dias mais felizes.
 Eu te amo infinitamente ❤️
 </div>
 
-<audio autoplay loop>
+<audio id="musica" loop>
 <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
 </audio>
 
@@ -114,6 +110,10 @@ Eu te amo infinitamente ❤️
 
 function mostrar(){
 document.getElementById("surpresa").style.display="block"
+}
+
+function tocarMusica(){
+document.getElementById("musica").play()
 }
 
 function coracao(){
