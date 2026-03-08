@@ -100,10 +100,13 @@ Obrigado por existir e por fazer meus dias mais felizes.
 Eu te amo infinitamente ❤️
 </div>
 
-<audio id="musica" loop>
-<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-</audio>
-
+<<iframe 
+id="musica"
+width="0"
+height="0"
+src="https://www.youtube.com/embed/6UQHIQpBw6w"
+allow="autoplay">
+</iframe>
 <script>
 
 function mostrar(){
@@ -111,7 +114,8 @@ document.getElementById("surpresa").style.display="block"
 }
 
 function tocarMusica(){
-document.getElementById("musica").play()
+let iframe = document.getElementById("musica")
+iframe.src += "?autoplay=1"
 }
 
 function coracao(){
