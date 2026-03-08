@@ -1,93 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
 <meta charset="UTF-8">
-<title>Feliz Dia da Mulher 🌹</title>
+<title>Para o Meu Amor ❤️</title>
 
 <style>
+
 body{
-margin:0;
-padding:0;
+background: linear-gradient(135deg,#ff758c,#ff7eb3);
+font-family: Arial;
 text-align:center;
 color:white;
-font-family:Arial;
-overflow:hidden;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
-url("https://images.unsplash.com/photo-1490750967868-88aa4486c946");
-background-size:cover;
-background-position:center;
+padding:40px;
 }
 
 h1{
-margin-top:80px;
-font-size:45px;
-color:#ff4d6d;
+font-size:55px;
 }
 
 p{
-font-size:20px;
-width:80%;
+font-size:22px;
+max-width:700px;
 margin:auto;
-margin-top:15px;
+line-height:1.6;
 }
 
-.flor{
+button{
+margin-top:30px;
+padding:15px 30px;
+font-size:20px;
+border:none;
+border-radius:10px;
+background:white;
+color:#ff4d6d;
+cursor:pointer;
+}
+
+button:hover{
+background:#ffe6ec;
+}
+
+#surpresa{
+display:none;
+margin-top:30px;
+font-size:24px;
+}
+
+img{
+width:250px;
+border-radius:20px;
+margin:10px;
+}
+
+.heart{
 position:fixed;
 top:-10px;
-font-size:22px;
-animation:fall linear forwards;
+color:red;
+animation:fall 5s linear infinite;
 }
 
 @keyframes fall{
-to{
-transform:translateY(100vh);
+0%{transform:translateY(0)}
+100%{transform:translateY(100vh)}
 }
-}
+
 </style>
+
 </head>
 
 <body>
 
-<h1>Feliz Dia da Mulher 🌹</h1>
+<h1>Para o Amor da Minha Vida ❤️</h1>
 
 <p>
-Hoje é um dia especial para lembrar o quanto você é incrível.
-Uma mulher forte, batalhadora e cheia de luz.
+Desde que você entrou na minha vida tudo ficou mais bonito.
+Cada momento ao seu lado se tornou especial, cada sorriso seu ilumina
+meu dia e cada abraço seu faz meu mundo ficar completo.
+
+Você não é apenas a pessoa que eu amo,
+você é minha paz, minha alegria e minha inspiração.
+
+Prometo continuar ao seu lado,
+te fazendo sorrir, te apoiando em tudo
+e construindo juntos uma linda história.
+
+Eu te amo hoje,
+amanhã
+e para sempre. ❤️
 </p>
 
-<p>
-Quero que você saiba o quanto eu te admiro
-e o quanto eu te amo.
-</p>
+<br>
 
-<p>
-Que sua vida seja cheia de felicidade,
-conquistas, paz e amor.
-</p>
+<h2>Nossas Memórias 📸</h2>
 
-<p>Com carinho ❤️</p>
+<img src="https://i.imgur.com/9yG3K3H.jpg">
+<img src="https://i.imgur.com/8Km9tLL.jpg">
 
-<iframe width="0" height="0"
-src="https://www.youtube.com/embed/6UQHIQpBw6w?autoplay=1&loop=1&playlist=6UQHIQpBw6w"
-frameborder="0"
-allow="autoplay">
-</iframe>
+<br>
+
+<button onclick="mostrar()">Clique para uma surpresa 🎁</button>
+
+<div id="surpresa">
+💌 Você é a melhor coisa que já aconteceu na minha vida.  
+Obrigado por existir e por fazer meus dias mais felizes.  
+Eu te amo infinitamente ❤️
+</div>
+
+<audio autoplay loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
 
 <script>
-function criarFlor(){
-const flor = document.createElement("div");
-flor.classList.add("flor");
-flor.innerHTML="🌹";
-flor.style.left=Math.random()*100+"vw";
-flor.style.animationDuration=Math.random()*3+3+"s";
-document.body.appendChild(flor);
 
-setTimeout(()=>{
-flor.remove();
-},5000);
+function mostrar(){
+document.getElementById("surpresa").style.display="block"
 }
 
-setInterval(criarFlor,300);
+function coracao(){
+let heart=document.createElement("div")
+heart.className="heart"
+heart.innerHTML="❤️"
+heart.style.left=Math.random()*100+"vw"
+heart.style.fontSize=(Math.random()*20+20)+"px"
+document.body.appendChild(heart)
+
+setTimeout(()=>{
+heart.remove()
+},5000)
+}
+
+setInterval(coracao,300)
+
 </script>
 
 </body>
