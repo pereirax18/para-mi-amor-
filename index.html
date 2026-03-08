@@ -31,7 +31,7 @@ margin:auto;
 margin-top:15px;
 }
 
-.heart{
+.flor{
 position:fixed;
 top:-10px;
 font-size:22px;
@@ -67,7 +67,6 @@ conquistas, paz e amor.
 
 <p>Com carinho ❤️</p>
 
-<!-- Música -->
 <iframe width="0" height="0"
 src="https://www.youtube.com/embed/6UQHIQpBw6w?autoplay=1&loop=1&playlist=6UQHIQpBw6w"
 frameborder="0"
@@ -77,10 +76,10 @@ allow="autoplay">
 <script>
 function criarFlor(){
 const flor = document.createElement("div");
-flor.classList.add("heart");
-flor.innerHTML = "🌹";
-flor.style.left = Math.random()*100+"vw";
-flor.style.animationDuration = Math.random()*3+3+"s";
+flor.classList.add("flor");
+flor.innerHTML="🌹";
+flor.style.left=Math.random()*100+"vw";
+flor.style.animationDuration=Math.random()*3+3+"s";
 document.body.appendChild(flor);
 
 setTimeout(()=>{
