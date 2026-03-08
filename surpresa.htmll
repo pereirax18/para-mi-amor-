@@ -77,27 +77,20 @@ allow="autoplay">
 </iframe>
 
 <script>
-
 function criarCoracao(){
-
 const coracao = document.createElement("div");
 coracao.classList.add("heart");
-
 coracao.innerHTML = "🌹";
-
 coracao.style.left = Math.random()*100+"vw";
 coracao.style.animationDuration = Math.random()*3+3+"s";
-
 document.body.appendChild(coracao);
 
 setTimeout(()=>{
 coracao.remove();
 },5000);
-
 }
 
 setInterval(criarCoracao,300);
-
 </script>
 
 </body>
